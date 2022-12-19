@@ -1,0 +1,20 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel Plotter
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+struct PointData
+{
+    float x;
+    float y;
+    float z;
+};
+
+RWStructuredBuffer<PointData> pointBuffer;
+
+[numthreads(8,8,1)]
+void Plotter (uint3 id : SV_DispatchThreadID)
+{
+    
+    // TODO: insert actual code here!
+}
